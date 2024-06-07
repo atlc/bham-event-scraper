@@ -1,5 +1,5 @@
-// import { getSchedule } from "./events/music/iron_city";
-// getSchedule()
+// import { getSchedule } from "./events/music/workplay";
+// getSchedule().then(console.log);
 
 import { formatEventInfo } from "./events";
 

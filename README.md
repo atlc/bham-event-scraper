@@ -1,4 +1,4 @@
-# What's Happening in Birmingham Soon
+# What's Upcoming in Birmingham
 
 ## Music
 
@@ -52,6 +52,38 @@
 
 [JUN 27] Summer Movie Night (6:00 PM - 10:00 PM)
 
+### Workplay
+
+[Saturday, Jun 08] Penny Circus, Grand Champ, Bicycle Day, Cinema Now
+
+[Friday, Jun 14] Crosby, Stills, Nash & Young
+
+[Thursday, Jun 20] Re-Groove-Enation
+
+[Friday, Jun 21] Gloom Girl MFG
+
+[Saturday, Jun 22] Smokeshow Rodeo
+
+[Friday, Jun 28] Anything But Ordinary Fest
+
+[Saturday, Jun 29] Reggaetonlandia}
+
+### The Nick
+
+[Fri, 6/7] 40 Years of The Nick! Early Show 7pm! with Clay Connor & Kyle Kimbrell (Doors: 7:00 pm; $7 ADV)
+
+[Fri, 6/7] 40 Years of The Nick Celebration! Night 1! With Shaheed & DJ Supreme & Tomorrow's Old Trio (Doors: 9:30 pm; $7 ADV - $10 DOS)
+
+[Sat, 6/8] Alma Russ!!! Free Show 5pm to 7pm! 40 Years of The Nick Daytime Show! (Doors: 4:00 pm; Free)
+
+[Sat, 6/8] 40 Years of The Nick Rocks Celebration with P.O.T.I.S., Blood Moon Riot, Shadows of the Wind & Oxmoor! Night 2! (Doors: 9:00 pm; $7 ADV - $10 DOS)
+
+[Sun, 6/9] 40 Years of The Nick- Burlesque Open Stage Night at The Nick with Bella Donna & Patsy Fine (Doors: 8:00 pm; $10 ADV)
+
+[Mon, 6/10] Birmingham Bandstand (Open Mic) with Special Guest Temple Monarc (Doors: 7:00 pm; $3.00)
+
+[Tue, 6/11] Birmingham Songwriter’s Round with Host Susannah Seales (Doors: 8:00 pm; $7 ADV -)}
+
 ## City
 
 ## Sports
@@ -86,4 +118,4 @@
 
 ---
 
-Data last scraped 6/7/2024, 2:18:05 PM. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped 6/7/2024, 2:47:25 PM. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
