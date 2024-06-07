@@ -1,7 +1,7 @@
-import { formatEventInfo } from "./events";
-formatEventInfo().then(console.log);
+import fs from "fs";
 
-// import { getSchedule } from "./events/sports/stallions";
-// getSchedule().then(console.log);
+import { formatEventInfo } from "./events";
+
+formatEventInfo().then(console.log);
 
 process.on("uncaughtException", console.log);

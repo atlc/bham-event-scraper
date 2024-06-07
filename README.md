@@ -1,3 +1,9 @@
+# Demo:
+
+![](./demo.gif)
+
+Outputs something similar to the below:
+
 # What's Upcoming in Birmingham
 
 ## Music
@@ -154,4 +160,4 @@ The Birmingham Squadron are either currently out of season, or now in season but
 
 ---
 
-Data last scraped 6/7/2024, 4:59:12 PM, taking 83.0 seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped 6/7/2024, 5:19:07 PM, taking 95.4 seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
