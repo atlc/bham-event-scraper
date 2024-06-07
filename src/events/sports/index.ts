@@ -1,17 +1,13 @@
-import { fetchSchedule } from "./barons";
-import { getSchedule } from "./legion";
+import { fetchSchedule as getBaronsSchedule } from "./barons";
+import { getSchedule as getLegionSchedule } from "./legion";
+import { getSchedule as getStallionsSchedule } from "./stallions";
+import { getSchedule as getSquadronSchedule } from "./squadron";
 
 export async function loadSportEvents() {
-    const barons = await fetchSchedule();
-    const legion = await getSchedule();
+    const barons = await getBaronsSchedule();
+    const legion = await getLegionSchedule();
+    const stallions = await getStallionsSchedule();
+    const squadron = await getSquadronSchedule();
 
-    return { barons, legion };
+    return { barons, legion, stallions, squadron };
 }
-
-import { url as baronsURL } from "./barons";
-import { url as legionURL } from "./barons";
-
-export const urls = {
-    barons: baronsURL,
-    legion: legionURL,
-};

@@ -18,7 +18,7 @@ export async function getSchedule() {
 
             const [day, time] = date.split(" @ ");
 
-            const formatted = `[${day}] ${name} (${time && time + "; "}*${description.substring(0, 280)}...*}`;
+            const formatted = `[${day}] ${name} (${time ? time + "; " : ""}*${description.substring(0, 280)}...*)`;
             return { day, time, name, formatted };
         });
     } finally {

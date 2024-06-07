@@ -37,7 +37,7 @@ export async function fetchSchedule() {
         return upcomingGames;
     } catch (error) {
         console.log(error);
-        return [];
+        return [{ formatted: "Couldn't scrape Barons data at this time" }];
     }
 }
 

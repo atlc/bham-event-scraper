@@ -20,7 +20,7 @@ export async function getSchedule() {
 
             const [day, time] = date.split(" | ");
 
-            return { name, date, formatted: `[${day}] ${name} (${time}; *${description}*)` };
+            return { name, date, formatted: `[${day}] ${name} (${time}; *${description.substring(0, 280)}*)` };
         });
     } finally {
         await driver.quit();

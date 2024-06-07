@@ -94,7 +94,7 @@
 
 [Tuesday, June 11] Nature Trivia Night (7:00 pm - 9:00 pm; _Test your knowledge of Alabama’s flora and fauna with naturalist Henry Hershey. Enjoy complimentary drinks and compete for a chance to win a captivating prize!_)
 
-[Wednesday, June 12] Creating a Backyard Wildlife Habitat (9:00 am - 10:30 am; _Learn about how Master Gardener Peggy Thompson created a certified backyard wildlife habitat at her home. Gain insights into the essential considerations for planning and nurturing a thriving ecosystem in your own backyard. Join Peggy and Friends’ horticulturist Keith Turney for an inspiring walk through the Kaul Wildflower Garden's new “living bird feeder.”_)
+[Wednesday, June 12] Creating a Backyard Wildlife Habitat (9:00 am - 10:30 am; _Learn about how Master Gardener Peggy Thompson created a certified backyard wildlife habitat at her home. Gain insights into the essential considerations for planning and nurturing a thriving ecosystem in your own backyard. Join Peggy and Friends’ horticulturist Keith Turney for _)
 
 [Friday, June 14] The Four Elements of Japanese Garden Design (9:00 am - 10:00 am; _Immerse yourself in the serenity of the Japanese Garden with Friends’ horticulturist Julia Adams. Delve into the four fundamental elements of Japanese Garden design (plants, rock, water, and ornament) while surrounded by the beauty of nature in this outdoor class._)
 
@@ -102,15 +102,17 @@
 
 [Saturday, June 15] Annual Hardy Fern Sale (10:00 am - 2:00 pm; _The Birmingham Fern Society will hold its annual sale of hardy ferns in the growing area above the Fern Glade in Birmingham Botanical Gardens._)
 
+### Museum of Art
+
 ### The Zoo
 
-[June 8] Zoo Brews (6:00 pm - 9:00 pm; _Experience more than 20 breweries from all over Alabama and the southeast while you travel through the Zoo! Perfect for adults 21 and up, this event is a signature favorite! Attendees will delight in tasty selections from local food truck vendors. Come sample tastings from Abita,..._}
+[June 8] Zoo Brews (6:00 pm - 9:00 pm; _Experience more than 20 breweries from all over Alabama and the southeast while you travel through the Zoo! Perfect for adults 21 and up, this event is a signature favorite! Attendees will delight in tasty selections from local food truck vendors. Come sample tastings from Abita,..._)
 
-[June 15] Pancakes and Princesses (8:30 am - 2:00 pm; _Hear ye, hear ye – Princes and Princesses! Join your Birmingham Zoo for an enchanted day with our magical court of characters during the Royal Pancakes and Princesses Breakfast! Taking place on Saturday, June 15 on the Balcony and Terraces of the Zoo's Administration Building. Fi..._}
+[June 15] Pancakes and Princesses (8:30 am - 2:00 pm; _Hear ye, hear ye – Princes and Princesses! Join your Birmingham Zoo for an enchanted day with our magical court of characters during the Royal Pancakes and Princesses Breakfast! Taking place on Saturday, June 15 on the Balcony and Terraces of the Zoo's Administration Building. Fi..._)
 
-[July 11 - July 23] Journey to Ecuador and the Islands of the Galapagos (undefined*Explore and Experience Ecuador and the Islands of the Galapagos with your Birmingham Zoo! Join President and CEO, Chris Pfefferkorn, on a classic journey to the Galapagos July 11 - 23, 2024! For more information, email Blang@birminghamzoo.com Download FULL BROCHURE HERE Download ...*}
+[July 11 - July 23] Journey to Ecuador and the Islands of the Galapagos (_Explore and Experience Ecuador and the Islands of the Galapagos with your Birmingham Zoo! Join President and CEO, Chris Pfefferkorn, on a classic journey to the Galapagos July 11 - 23, 2024! For more information, email Blang@birminghamzoo.com Download FULL BROCHURE HERE Download ..._)
 
-[September 13] Zoo Gala Safari Soiree (undefined*Mark your calendars for Zoo Gala 2024, an unforgettable evening filled with elegance, entertainment, exceptional cuisine, and majestic animals at your Birmingham Zoo. This year's Zoo Gala is black tie optional and will be a true Safari Soiree on Friday, September 13, 2024. Zoo Ga...*}
+[September 13] Zoo Gala Safari Soiree (_Mark your calendars for Zoo Gala 2024, an unforgettable evening filled with elegance, entertainment, exceptional cuisine, and majestic animals at your Birmingham Zoo. This year's Zoo Gala is black tie optional and will be a true Safari Soiree on Friday, September 13, 2024. Zoo Ga..._)
 
 ## Sports
 
@@ -142,6 +144,14 @@
 
 [AWAY] Legion at Charleston Battery (Friday, July 5 @6:30 p.m. CT)
 
+### Stallions
+
+[**HOME**] USFL CONFERENCE CHAMPIONSHIP VS MICHIGAN PANTHERS (Saturday, June 8, 3:00 PM ET)
+
+### Squadron
+
+The Birmingham Squadron are either currently out of season, or now in season but I haven't seen what the calendar looks like and consequently haven't written a scraper for it yet
+
 ---
 
-Data last scraped 6/7/2024, 3:30:50 PM. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped 6/7/2024, 4:59:12 PM, taking 83.0 seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.

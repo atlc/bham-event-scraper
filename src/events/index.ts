@@ -7,9 +7,15 @@ function getFormatted(events: { formatted: string }[]) {
 }
 
 export async function formatEventInfo() {
-    const { avondale, ironCity, theNick, saturn, workplay } = await loadMusicEvents();
+    const start = Date.now();
+
     const { gardens, zoo } = await loadCityEvents();
-    const { barons, legion } = await loadSportEvents();
+    const { avondale, ironCity, theNick, saturn, workplay } = await loadMusicEvents();
+    const { barons, legion, stallions, squadron } = await loadSportEvents();
+
+    const end = Date.now();
+
+    const runtime = ((end - start) / 1000).toFixed(1);
 
     const markdown = `# What's Upcoming in Birmingham
     
@@ -36,6 +42,8 @@ ${getFormatted(theNick)}}
 ### Botanical Gardens
 ${getFormatted(gardens)}
 
+### Museum of Art
+
 ### The Zoo
 ${getFormatted(zoo)}
 
@@ -47,9 +55,15 @@ ${getFormatted(barons)}
 ### Legion
 ${getFormatted(legion)}
 
+### Stallions
+${getFormatted(stallions)}
+
+### Squadron
+${getFormatted(squadron)}
+
 ---
 
-Data last scraped ${new Date().toLocaleString()}. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped ${new Date().toLocaleString()}, taking ${runtime} seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
 `;
 
     return markdown;
