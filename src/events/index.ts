@@ -1,12 +1,14 @@
+import { loadCityEvents } from "./city";
 import { loadMusicEvents } from "./music";
 import { loadSportEvents } from "./sports";
 
-function getFormatted(event: { formatted: string }) {
-    return event.formatted;
+function getFormatted(events: { formatted: string }[]) {
+    return events.map((event) => event.formatted).join("\n\n");
 }
 
 export async function formatEventInfo() {
     const { avondale, ironCity, theNick, saturn, workplay } = await loadMusicEvents();
+    const { gardens, zoo } = await loadCityEvents();
     const { barons, legion } = await loadSportEvents();
 
     const markdown = `# What's Upcoming in Birmingham
@@ -14,30 +16,36 @@ export async function formatEventInfo() {
 ## Music
 
 ### Saturn
-${saturn.map(getFormatted).join("\n\n")}
+${getFormatted(saturn)}
 
 ### Iron City
-${ironCity.map(getFormatted).join("\n\n")}
+${getFormatted(ironCity)}
 
 ### Avondale
-${avondale.map(getFormatted).join("\n\n")}
+${getFormatted(avondale)}
 
 ### Workplay
-${workplay.map(getFormatted).join("\n\n")}}
+${getFormatted(workplay)}}
 
 ### The Nick
-${theNick.map(getFormatted).join("\n\n")}}
+${getFormatted(theNick)}}
 
 
 ## City 
 
+### Botanical Gardens
+${getFormatted(gardens)}
+
+### The Zoo
+${getFormatted(zoo)}
+
 ## Sports
 
 ### Barons
-${barons.map(getFormatted).join("\n\n")}
+${getFormatted(barons)}
 
 ### Legion
-${legion.map(getFormatted).join("\n\n")}
+${getFormatted(legion)}
 
 ---
 
