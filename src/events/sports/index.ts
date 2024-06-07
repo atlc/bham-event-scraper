@@ -7,3 +7,11 @@ export async function loadSportEvents() {
 
     return { barons, legion };
 }
+
+import { url as baronsURL } from "./barons";
+import { url as legionURL } from "./barons";
+
+export const urls = {
+    barons: baronsURL,
+    legion: legionURL,
+};

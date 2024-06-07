@@ -4,7 +4,7 @@ import { generate_driver } from "../../selenium";
 const date = new Date();
 const YYYY = date.getFullYear();
 
-const url = `https://www.bhmlegion.com/legion-fc-${YYYY}-schedule/`;
+export const url = `https://www.bhmlegion.com/legion-fc-${YYYY}-schedule/`;
 
 export async function getSchedule() {
     const driver = generate_driver();
@@ -20,12 +20,15 @@ export async function getSchedule() {
             .map((str) => {
                 const elements = str.split("\n");
 
+                let [type] = elements;
+                type = type === "HOME" ? "**HOME**" : "AWAY";
+
                 if (elements.length === 7) {
-                    const [type, date, versus, theme, time, stadium, city] = elements;
-                    const formatted = `[${type}] Legion ${versus} (${date} @${time}) [Special Theme: ${theme}]`;
+                    const [_type, date, versus, theme, time, stadium, city] = elements;
+                    const formatted = `[${type}] Legion ${versus} (${date} @${time}) [*Special Theme: ${theme}*]`;
                     return { type, date, versus, theme, time, stadium, city, formatted };
                 } else {
-                    const [type, date, versus, time, stadium, city] = elements;
+                    const [_type, date, versus, time, stadium, city] = elements;
                     const formatted = `[${type}] Legion ${versus} (${date} @${time})`;
                     return { type, date, versus, theme: "None", time, stadium, city, formatted };
                 }

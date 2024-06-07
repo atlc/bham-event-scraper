@@ -6,7 +6,7 @@ const [YYYY, MM, DD] = days.split("-");
 
 const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-const url = `https://statsapi.mlb.com/api/v1/schedule?lang=en&sportId=11,12,13,14,15,16,5442&hydrate=team(venue(timezone,location)),venue(timezone,location),game(seriesStatus,seriesSummary,tickets,promotions,sponsorships,content(summary,media(epg))),seriesStatus,seriesSummary,decisions,person,linescore,broadcasts(all),tickets,event(tickets),radioBroadcasts&season=${YYYY}&startDate=${YYYY}-${MM}-01&endDate=${YYYY}-${MM}-${lastDayOfMonth}&teamId=247&eventTypes=primary&scheduleTypes=games,events,xref`;
+export const url = `https://statsapi.mlb.com/api/v1/schedule?lang=en&sportId=11,12,13,14,15,16,5442&hydrate=team(venue(timezone,location)),venue(timezone,location),game(seriesStatus,seriesSummary,tickets,promotions,sponsorships,content(summary,media(epg))),seriesStatus,seriesSummary,decisions,person,linescore,broadcasts(all),tickets,event(tickets),radioBroadcasts&season=${YYYY}&startDate=${YYYY}-${MM}-01&endDate=${YYYY}-${MM}-${lastDayOfMonth}&teamId=247&eventTypes=primary&scheduleTypes=games,events,xref`;
 
 export async function fetchSchedule() {
     try {
@@ -25,7 +25,7 @@ export async function fetchSchedule() {
                 const awayTeam = game.teams.away.team.name;
                 const homeTeam = game.teams.home.team.name;
                 const venue = game.venue.name;
-                const type = venue === "Regions Field" ? "HOME" : "AWAY";
+                const type = venue === "Regions Field" ? "**HOME**" : "AWAY";
                 const localizedDate = new Date(game.gameDate).toLocaleString();
                 const [day, time] = localizedDate.split(", ");
 
