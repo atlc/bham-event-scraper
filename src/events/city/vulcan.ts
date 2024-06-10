@@ -1,6 +1,6 @@
 import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
-import { MAX_DESCRIPTION_LENGTH } from "./";
+import { MAX_DESCRIPTION_LENGTH } from "../";
 
 const url = "https://visitvulcan.com/events/";
 

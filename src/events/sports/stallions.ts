@@ -1,5 +1,6 @@
 import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
+import { months } from "..";
 
 export const url = `https://www.theufl.com/teams/birmingham/schedule`;
 
@@ -27,25 +28,11 @@ export async function getSchedule() {
 
                 const [weekday, month, day] = date.replace(",", "").split(" ");
 
-                const months: { [key: string]: number } = {
-                    January: 0,
-                    February: 1,
-                    March: 2,
-                    April: 3,
-                    May: 4,
-                    June: 5,
-                    July: 6,
-                    August: 7,
-                    September: 8,
-                    October: 9,
-                    November: 10,
-                    December: 11,
-                };
-
                 const today = new Date();
                 const thisYear = today.getFullYear();
 
-                const gameDate = new Date(thisYear, months[month], Number(day));
+                const monthNumber = months[month] as number;
+                const gameDate = new Date(thisYear, monthNumber, Number(day));
 
                 const isUpcoming = gameDate > today;
 
