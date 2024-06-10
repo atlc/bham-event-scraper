@@ -1,5 +1,6 @@
 import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
+import { MAX_DESCRIPTION_LENGTH } from ".";
 
 const url = "https://www.birminghamzoo.com/events/";
 
@@ -18,7 +19,9 @@ export async function getSchedule() {
 
             const [day, time] = date.split(" @ ");
 
-            const formatted = `[${day}] ${name} (${time ? time + "; " : ""}*${description.substring(0, 280)}...*)`;
+            const substringedDescription = description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH)}...` : description;
+
+            const formatted = `[${day}] ${name} (${time ? time + "; " : ""}*${substringedDescription}*)`;
             return { day, time, name, formatted };
         });
     } finally {

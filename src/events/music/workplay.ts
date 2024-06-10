@@ -12,7 +12,7 @@ export async function getSchedule() {
     try {
         await driver.get(url);
 
-        const events = (await driver.findElements(By.className("search-event"))).slice(0, 7);
+        const events = (await driver.findElements(By.className("search-event"))).slice(0, 4);
         const eventText = await Promise.all(events.map((event) => event.getText()));
 
         return eventText.map((event) => {

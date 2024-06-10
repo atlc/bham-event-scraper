@@ -1,5 +1,6 @@
 import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
+import { MAX_DESCRIPTION_LENGTH } from "./";
 
 const url = "https://www.artsbma.org/things-to-do/calendar/";
 
@@ -17,9 +18,12 @@ export async function getSchedule() {
 
             const [date, name, area, description] = sections;
 
+            const substringedDescription =
+                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+
             const [day, time] = date.split(" @ ");
 
-            const formatted = `[${day}] ${name} - ${area} (${time ? time + "; " : ""}*${description}*)`;
+            const formatted = `[${day}] ${name} - ${area} (${time ? time + "; " : ""}*${substringedDescription}*)`;
             return { day, time, name, formatted };
         });
     } finally {

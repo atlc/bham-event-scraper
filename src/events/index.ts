@@ -9,7 +9,7 @@ function getFormatted(events: { formatted: string }[]) {
 export async function formatEventInfo() {
     const start = Date.now();
 
-    const { gardens, zoo } = await loadCityEvents();
+    const { gardens, museum, zoo } = await loadCityEvents();
     const { avondale, ironCity, theNick, saturn, workplay } = await loadMusicEvents();
     const { barons, legion, stallions, squadron } = await loadSportEvents();
 
@@ -17,50 +17,58 @@ export async function formatEventInfo() {
 
     const runtime = ((end - start) / 1000).toFixed(1);
 
-    const markdown = `# What's Upcoming in Birmingham
-    
-## Music
+    const music = `## Music
 
-### Saturn
+### [Saturn](https://saturnbirmingham.com/calendar/)
 ${getFormatted(saturn)}
 
-### Iron City
+### [Iron City](https://ironcitybham.com/events/)
 ${getFormatted(ironCity)}
 
-### Avondale
+### [Avondale](https://www.avondalebrewing.com/calendar-tickets)
 ${getFormatted(avondale)}
 
-### Workplay
+### [Workplay](https://workplay.com/events/)
 ${getFormatted(workplay)}}
 
-### The Nick
-${getFormatted(theNick)}}
+### [The Nick](https://www.thenickrocks.com/events/)
+${getFormatted(theNick)}}`;
 
+    const city = `## City 
 
-## City 
-
-### Botanical Gardens
+### [Botanical Gardens](https://bbgardens.org/events/)
 ${getFormatted(gardens)}
 
-### Museum of Art
+### [Museum of Art](https://www.artsbma.org/things-to-do/calendar/)
+${getFormatted(museum)}
 
-### The Zoo
+### [The Zoo](https://www.birminghamzoo.com/events/)
 ${getFormatted(zoo)}
 
-## Sports
+### [Vulcan](https://visitvulcan.com/events/) (coming soon)`;
 
-### Barons
+    const sports = `## Sports
+
+### [Barons](https://www.milb.com/birmingham/schedule)
 ${getFormatted(barons)}
 
-### Legion
+### [Legion](https://www.bhmlegion.com/legion-fc-2024-schedule/)
 ${getFormatted(legion)}
 
-### Stallions
+### [Stallions](https://www.theufl.com/teams/birmingham/schedule)
 ${getFormatted(stallions)}
 
-### Squadron
-${getFormatted(squadron)}
+### [Squadron](https://birmingham.gleague.nba.com/schedule)
+${getFormatted(squadron)}`;
 
+    const markdown = `# What's Upcoming in Birmingham
+    
+    ${music}
+
+    ${city}
+
+    ${sports}
+    
 ---
 
 Data last scraped ${new Date().toLocaleString()}, taking ${runtime} seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
