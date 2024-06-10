@@ -19,7 +19,7 @@ export async function formatEventInfo() {
 
     const { cityEvents, musicEvents, sportEvents } = Object.fromEntries(loadedEvents);
 
-    const { gardens, museum, zoo } = cityEvents;
+    const { gardens, museum, vulcan, zoo } = cityEvents;
     const { avondale, ironCity, theNick, saturn, workplay } = musicEvents;
     const { barons, legion, stallions, squadron } = sportEvents;
 
@@ -55,7 +55,8 @@ ${getFormatted(museum)}
 ### [The Zoo](https://www.birminghamzoo.com/events/)
 ${getFormatted(zoo)}
 
-### [Vulcan](https://visitvulcan.com/events/) (coming soon)`;
+### [Vulcan](https://visitvulcan.com/events/)
+${getFormatted(vulcan)}`;
 
     const sports = `## Sports
 
