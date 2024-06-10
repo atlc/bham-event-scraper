@@ -9,9 +9,19 @@ function getFormatted(events: { formatted: string }[]) {
 export async function formatEventInfo() {
     const start = Date.now();
 
-    const { gardens, museum, zoo } = await loadCityEvents();
-    const { avondale, ironCity, theNick, saturn, workplay } = await loadMusicEvents();
-    const { barons, legion, stallions, squadron } = await loadSportEvents();
+    const eventSchedules = {
+        cityEvents: loadCityEvents(),
+        musicEvents: loadMusicEvents(),
+        sportEvents: loadSportEvents(),
+    };
+
+    const loadedEvents = await Promise.all(Object.entries(eventSchedules).map(async ([key, promise]) => [key, await promise]));
+
+    const { cityEvents, musicEvents, sportEvents } = Object.fromEntries(loadedEvents);
+
+    const { gardens, museum, zoo } = cityEvents;
+    const { avondale, ironCity, theNick, saturn, workplay } = musicEvents;
+    const { barons, legion, stallions, squadron } = sportEvents;
 
     const end = Date.now();
 
@@ -63,11 +73,11 @@ ${getFormatted(squadron)}`;
 
     const markdown = `# What's Upcoming in Birmingham
     
-    ${music}
+${music}
 
-    ${city}
+${city}
 
-    ${sports}
+${sports}
     
 ---
 

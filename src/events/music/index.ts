@@ -5,11 +5,17 @@ import { getSchedule as getSaturn } from "./saturn";
 import { getSchedule as getWorkplay } from "./workplay";
 
 export async function loadMusicEvents() {
-    const avondale = await getAvondale();
-    const ironCity = await getIronCity();
-    const theNick = await getTheNick();
-    const saturn = await getSaturn();
-    const workplay = await getWorkplay();
+    const musicSchedules = {
+        avondale: getAvondale(),
+        ironCity: getIronCity(),
+        theNick: getTheNick(),
+        saturn: getSaturn(),
+        workplay: getWorkplay(),
+    };
+
+    const loadedMusicSchedules = await Promise.all(Object.entries(musicSchedules).map(async ([key, promise]) => [key, await promise]));
+
+    const { avondale, ironCity, theNick, saturn, workplay } = Object.fromEntries(loadedMusicSchedules);
 
     return {
         avondale,

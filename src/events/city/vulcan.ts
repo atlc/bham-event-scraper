@@ -2,7 +2,7 @@ import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
 import { MAX_DESCRIPTION_LENGTH } from "./";
 
-const url = "https://www.artsbma.org/things-to-do/calendar/";
+const url = "https://visitvulcan.com/events/";
 
 export async function getSchedule() {
     const driver = await generate_driver();

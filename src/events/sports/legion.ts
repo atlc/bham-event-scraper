@@ -15,7 +15,7 @@ export async function getSchedule() {
 
         const stripped = (await Promise.all(events.map((event) => event.getText()))).filter((x) => x);
         const formatted = stripped
-            .slice(0, 5)
+            .slice(0, 3)
             .map((str) => str.replace("\nTICKETS", "").replace("\nWATCH", ""))
             .map((str) => {
                 const elements = str.split("\n");

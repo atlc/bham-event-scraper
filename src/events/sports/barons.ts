@@ -1,20 +1,24 @@
-const date = new Date();
-const dateString = date.toISOString();
-const [days, time] = dateString.split("T");
+export async function getSchedule() {
+    const date = new Date();
+    const dateString = date.toISOString();
+    const [days, time] = dateString.split("T");
 
-const [YYYY, MM, DD] = days.split("-");
+    const [YYYY, MM, DD] = days.split("-");
 
-const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-export const url = `https://statsapi.mlb.com/api/v1/schedule?lang=en&sportId=11,12,13,14,15,16,5442&hydrate=team(venue(timezone,location)),venue(timezone,location),game(seriesStatus,seriesSummary,tickets,promotions,sponsorships,content(summary,media(epg))),seriesStatus,seriesSummary,decisions,person,linescore,broadcasts(all),tickets,event(tickets),radioBroadcasts&season=${YYYY}&startDate=${YYYY}-${MM}-01&endDate=${YYYY}-${MM}-${lastDayOfMonth}&teamId=247&eventTypes=primary&scheduleTypes=games,events,xref`;
+    const url = `https://statsapi.mlb.com/api/v1/schedule?lang=en&sportId=11,12,13,14,15,16,5442&hydrate=team(venue(timezone,location)),venue(timezone,location),game(seriesStatus,seriesSummary,tickets,promotions,sponsorships,content(summary,media(epg))),seriesStatus,seriesSummary,decisions,person,linescore,broadcasts(all),tickets,event(tickets),radioBroadcasts&season=${YYYY}&startDate=${YYYY}-${MM}-01&endDate=${YYYY}-${MM}-${lastDayOfMonth}&teamId=247&eventTypes=primary&scheduleTypes=games,events,xref`;
 
-export async function fetchSchedule() {
     try {
         const res = await fetch(url);
         const data = (await res.json()) as BaronsScheduleResponse;
 
         const games = data.dates;
-        const currentGamesIndex = games.findIndex((game) => game.date === days);
+        const currentGamesIndex = games.findIndex((game) => {
+            const gameDate = new Date(game.date);
+            const gameIsInFuture = gameDate > date;
+            return gameIsInFuture;
+        });
 
         const upcomingGames = games
             .slice(currentGamesIndex, currentGamesIndex + 7)
