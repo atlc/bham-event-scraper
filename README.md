@@ -1,22 +1,14 @@
-# Demo:
+Sample output demonstrated below, with a gif of (non-headless) Selenium action
 
 ![](./demo.gif)
 
-Outputs something similar to the below:
+---
 
 # What's Upcoming in Birmingham
 
-## Music
+## Music & Entertainment
 
-### Saturn
-
-[June 07 2024] MILK & HONEY - PRIDE (Show: 9:00PM, Doors: 8:00PM)
-
-[June 08 2024] SATURN SUMMER MARKET (Show: 12:00PM)
-
-[June 08 2024] LOUD & PROUD: The Official Pride Parade After Party (Show: 10:30PM, Doors: 9:00PM)
-
-[June 09 2024] Black Joe Lewis & The Honeybears (Show: 8:00PM, Doors: 7:00PM)
+### [Saturn](https://saturnbirmingham.com/calendar/)
 
 [June 11 2024] Pink Flamingos (Show: 8:00PM)
 
@@ -26,7 +18,15 @@ Outputs something similar to the below:
 
 [June 14 2024] Steel City Men’s Chorus NO FILTER (Show: 7:30PM, Doors: 6:30PM)
 
-### Iron City
+[June 16 2024] Messer Chups (Show: 8:00PM, Doors: 7:00PM)
+
+[June 19 2024] Baroness (Show: 8:00PM, Doors: 7:00PM)
+
+[June 20 2024] Gladys Improv (Show: 8:30PM, Doors: 7:30PM)
+
+[June 21 2024] Gimme Gimme Disco (Show: 10:00PM, Doors: 9:00PM)
+
+### [Iron City](https://ironcitybham.com/events/)
 
 [JUN 14] GWAR
 
@@ -36,17 +36,7 @@ Outputs something similar to the below:
 
 [JUN 30] JENNY LEWIS
 
-[JUL 25] THE BROKEN HEARTS – TOM PETTY TRIBUTE
-
-[JUL 26] JACQUEES
-
-[AUG 9] ELECTRIC AVENUE
-
-### Avondale
-
-[JUN 7] Happy Landing w/ Zion Goins - The Upstairs at Avondale (Doors @ 7:00 PM CST // Show @ 8:00 PM CST)
-
-[JUN 8] The Molly Ringwalds (Doors 7:00 PM / Show 8:00 PM)
+### [Avondale](https://www.avondalebrewing.com/calendar-tickets)
 
 [JUN 13] Summer Movie Night (6:00 PM - 10:00 PM)
 
@@ -56,11 +46,7 @@ Outputs something similar to the below:
 
 [JUN 25] Never Come Down - The Upstairs at Avondale (Doors @ 6:00 PM CST // Show @ 7:00 PM CST)
 
-[JUN 27] Summer Movie Night (6:00 PM - 10:00 PM)
-
-### Workplay
-
-[Saturday, Jun 08] Penny Circus, Grand Champ, Bicycle Day, Cinema Now
+### [Workplay](https://workplay.com/events/)
 
 [Friday, Jun 14] Crosby, Stills, Nash & Young
 
@@ -68,69 +54,105 @@ Outputs something similar to the below:
 
 [Friday, Jun 21] Gloom Girl MFG
 
-[Saturday, Jun 22] Smokeshow Rodeo
+[Saturday, Jun 22] Smokeshow Rodeo}
 
-[Friday, Jun 28] Anything But Ordinary Fest
-
-[Saturday, Jun 29] Reggaetonlandia}
-
-### The Nick
-
-[Fri, 6/7] 40 Years of The Nick! Early Show 7pm! with Clay Connor & Kyle Kimbrell (Doors: 7:00 pm; $7 ADV)
-
-[Fri, 6/7] 40 Years of The Nick Celebration! Night 1! With Shaheed & DJ Supreme & Tomorrow's Old Trio (Doors: 9:30 pm; $7 ADV - $10 DOS)
-
-[Sat, 6/8] Alma Russ!!! Free Show 5pm to 7pm! 40 Years of The Nick Daytime Show! (Doors: 4:00 pm; Free)
-
-[Sat, 6/8] 40 Years of The Nick Rocks Celebration with P.O.T.I.S., Blood Moon Riot, Shadows of the Wind & Oxmoor! Night 2! (Doors: 9:00 pm; $7 ADV - $10 DOS)
-
-[Sun, 6/9] 40 Years of The Nick- Burlesque Open Stage Night at The Nick with Bella Donna & Patsy Fine (Doors: 8:00 pm; $10 ADV)
+### [The Nick](https://www.thenickrocks.com/events/)
 
 [Mon, 6/10] Birmingham Bandstand (Open Mic) with Special Guest Temple Monarc (Doors: 7:00 pm; $3.00)
 
-[Tue, 6/11] Birmingham Songwriter’s Round with Host Susannah Seales (Doors: 8:00 pm; $7 ADV -)}
+[Tue, 6/11] Birmingham Songwriter’s Round with Host Susannah Seales (Doors: 8:00 pm; $7 ADV -)
+
+[Wed, 6/12] Blaque House @ The Nick, House Music every Wednesday with DJ Stevo Blaque (Doors: 10:00 pm; $5 ADV)
+
+[Thu, 6/13] Drag Night Lube Wrestling! (Doors: 8:00 pm; $7 ADV - $10 DOS)
+
+[Fri, 6/14] Jenna McClelland & Johnny Hayes (Doors: 9:00 pm; $8 ADV - $10 DOS)
+
+[Sat, 6/15] Drag Night at The Nick (Doors: 8:00 pm; $7 ADV - $10 DOS)
+
+[Sun, 6/16] An Evening with Kyle Kimbrell (Doors: 7:00 pm; $7 Adv)}
 
 ## City
 
-### Botanical Gardens
+### [Barber](https://barberracingevents.com/upcoming-events/)
 
-[Friday, June 7] Storytime at the Gardens (10:00 am - 11:00 am Event Series; _Join us each week with your preschooler for a story followed by a nature activity at the Gardens!_)
+[June 11-13] Porsche Parade – Autocross (Proving Ground)
 
-[Monday, June 10] Around the World (Morning Camp) (9:00 am - 12:00 pm; _Join us for this week long summer camp!_)
+[June 15-16] Porsche Club of America – Car Track Day (Open to non-members of PCA)
 
-[Tuesday, June 11] Nature Trivia Night (7:00 pm - 9:00 pm; _Test your knowledge of Alabama’s flora and fauna with naturalist Henry Hershey. Enjoy complimentary drinks and compete for a chance to win a captivating prize!_)
+[June 22] ALSCCA Autocross – Proving Ground
 
-[Wednesday, June 12] Creating a Backyard Wildlife Habitat (9:00 am - 10:30 am; _Learn about how Master Gardener Peggy Thompson created a certified backyard wildlife habitat at her home. Gain insights into the essential considerations for planning and nurturing a thriving ecosystem in your own backyard. Join Peggy and Friends’ horticulturist Keith Turney for _)
+[June 22-23] Just Track It – Car Track Day
 
-[Friday, June 14] The Four Elements of Japanese Garden Design (9:00 am - 10:00 am; _Immerse yourself in the serenity of the Japanese Garden with Friends’ horticulturist Julia Adams. Delve into the four fundamental elements of Japanese Garden design (plants, rock, water, and ornament) while surrounded by the beauty of nature in this outdoor class._)
+[June 29-30] PanAmerican – Motorcycle Race
+
+[July 6-7] Chin Track Days – Car Track Day
+
+### [Botanical Gardens](https://bbgardens.org/events/)
+
+[Tuesday, June 11] Nature Trivia Night (7:00 pm - 9:00 pm; _Test your knowledge of Alabama’s flora and fauna with naturalist Henry Hershey. Enjoy complimentary drinks and compet..._)
+
+[Wednesday, June 12] Creating a Backyard Wildlife Habitat (9:00 am - 10:30 am; _Learn about how Master Gardener Peggy Thompson created a certified backyard wildlife habitat at her home. Gain insight..._)
+
+[Friday, June 14] The Four Elements of Japanese Garden Design (9:00 am - 10:00 am; _Immerse yourself in the serenity of the Japanese Garden with Friends’ horticulturist Julia Adams. Delve into the four ..._)
 
 [Friday, June 14] Storytime at the Gardens (10:00 am - 11:00 am Event Series; _Join us each week with your preschooler for a story followed by a nature activity at the Gardens!_)
 
-[Saturday, June 15] Annual Hardy Fern Sale (10:00 am - 2:00 pm; _The Birmingham Fern Society will hold its annual sale of hardy ferns in the growing area above the Fern Glade in Birmingham Botanical Gardens._)
+[Saturday, June 15] Annual Hardy Fern Sale (10:00 am - 2:00 pm; _The Birmingham Fern Society will hold its annual sale of hardy ferns in the growing area above the Fern Glade in Birmi..._)
 
-### Museum of Art
+[Monday, June 17] Nature & Survival (Two-Day Morning Camp) (9:00 am - 12:00 pm; _Join us for two day summer camp!_)
 
-### The Zoo
+[Thursday, June 20] STEM Garden Reception (8:00 am - Friday, June 21; _Join us to learn about our statewide STEM curriculum "Cultivate" that is helping k-6 educators incorporate STEM techni..._)
 
-[June 8] Zoo Brews (6:00 pm - 9:00 pm; _Experience more than 20 breweries from all over Alabama and the southeast while you travel through the Zoo! Perfect for adults 21 and up, this event is a signature favorite! Attendees will delight in tasty selections from local food truck vendors. Come sample tastings from Abita,..._)
+### [City Walk](https://citywalkbham.com/events/)
 
-[June 15] Pancakes and Princesses (8:30 am - 2:00 pm; _Hear ye, hear ye – Princes and Princesses! Join your Birmingham Zoo for an enchanted day with our magical court of characters during the Royal Pancakes and Princesses Breakfast! Taking place on Saturday, June 15 on the Balcony and Terraces of the Zoo's Administration Building. Fi..._)
+[June 10] "Porsche Parade Concours d’Elegance" (8:00 am - 3:00 pm); "City Walkers Walking Club" (5:30 pm);
 
-[July 11 - July 23] Journey to Ecuador and the Islands of the Galapagos (_Explore and Experience Ecuador and the Islands of the Galapagos with your Birmingham Zoo! Join President and CEO, Chris Pfefferkorn, on a classic journey to the Galapagos July 11 - 23, 2024! For more information, email Blang@birminghamzoo.com Download FULL BROCHURE HERE Download ..._)
+[June 11] "City Walkers Walking Club" (5:30 pm); "Magic City Futbol" (6:00 pm - 8:00 pm);
 
-[September 13] Zoo Gala Safari Soiree (_Mark your calendars for Zoo Gala 2024, an unforgettable evening filled with elegance, entertainment, exceptional cuisine, and majestic animals at your Birmingham Zoo. This year's Zoo Gala is black tie optional and will be a true Safari Soiree on Friday, September 13, 2024. Zoo Ga..._)
+[June 12] "Mobile Library" (1:00 pm - 2:00 pm); "City Walkers Walking Club" (5:30 pm); "Brittle Bones Wednesdays" (7:00 pm - 8:00 pm);
+
+[June 13] "City Walkers Walking Club" (5:30 pm); "Magic City Futbol" (6:00 pm - 8:00 pm);
+
+[June 14] "Friday Night Flicks: Kung Fu Panda" (7:00 pm - 9:30 pm);
+
+[June 15] "City Walkers Walking Club" (10:00 am); "City Walk Art Market by Art-Hub Collective" (3:00 pm - 8:00 pm);
+
+[June 16] "Live Trivia" (4:00 pm - 6:00 pm);
+
+### [Civil Rights Institute](https://www.bcri.org/upcoming-events/)
+
+[June 15, 2024] Juneteenth: A Celebration for the Culture (_Find out more_)
+
+[June 29, 2024] Book Signing at the BCRI Bookstore (_Find out more_)
+
+### [Museum of Art](https://www.artsbma.org/things-to-do/calendar/)
+
+[June 16] DROP IN TOUR - Circle the Globe Highlights Tour (1:00 pm - 2:00 pm; _With a collection of over 27,000 works of art from around the globe, the BMA can serve as a passport to adventure. On ..._)
+
+[June 22] FAMILY FESTIVAL - African Heritage Festival (1:00 pm - 5:00 pm; _Join us to celebrate the vibrant traditions of African cultures and the Museum’s African art galleries with the return..._)
+
+[June 23] DETOURS - “Minnehaha” and “Hiawatha” by Edmonia Lewis (1:00 pm - 1:30 pm; _Curious about works of art that aren’t always included on a BMA tour? Take a DeTour with us each Sunday, where we’ll s..._)
+
+### [The Zoo](https://www.birminghamzoo.com/events/)
+
+[June 15] Pancakes and Princesses (8:30 am - 2:00 pm; _Hear ye, hear ye – Princes and Princesses! Join your Birmingham Zoo for an enchanted day with our magical court of chara..._)
+
+[July 11 - July 23] Journey to Ecuador and the Islands of the Galapagos (_Explore and Experience Ecuador and the Islands of the Galapagos with your Birmingham Zoo! Join President and CEO, Chris ..._)
+
+[September 13] Zoo Gala Safari Soiree (_Mark your calendars for Zoo Gala 2024, an unforgettable evening filled with elegance, entertainment, exceptional cuisine..._)
+
+### [Vulcan](https://visitvulcan.com/events/)
+
+[March 1, 2024 - January 31, 2025] Vulcan at 120: Celebrating Birmingham’s Iconic Iron Man (_Vulcan is 120! Birmingham’s icon has had quite a life, starting with promoting the city to the world in 1904, and keep..._)
+
+[July 4 @ 9:00 pm - 10:00 pm] Thunder on the Mountain (_On July 4, the City of Birmingham welcomes all to visit and watch live a breathtaking show in honor of those who have ..._)
+
+[July 16 @ 9:00 am - 2:00 pm] Moretti, Mercer, and Marble Education Workshop (_Please join us for Moretti, Mercer, and Marble! In partnership with the @alabamahumanities we are excited to host teac..._)
 
 ## Sports
 
-### Barons
-
-[AWAY] Birmingham Barons @ Tennessee Smokies (6/7/2024 at 6 PM)
-
-[AWAY] Birmingham Barons @ Tennessee Smokies (6/8/2024 at 6 PM)
-
-[AWAY] Birmingham Barons @ Tennessee Smokies (6/9/2024 at 1 PM)
-
-[**HOME**] Pensacola Blue Wahoos @ Birmingham Barons (6/11/2024 at 6 PM)
+### [Barons](https://www.milb.com/birmingham/schedule)
 
 [**HOME**] Pensacola Blue Wahoos @ Birmingham Barons (6/12/2024 at 11 AM)
 
@@ -138,9 +160,15 @@ Outputs something similar to the below:
 
 [**HOME**] Pensacola Blue Wahoos @ Birmingham Barons (6/14/2024 at 7 PM)
 
-### Legion
+[**HOME**] Pensacola Blue Wahoos @ Birmingham Barons (6/15/2024 at 6:30 PM)
 
-[**HOME**] Legion vs Indy Eleven (Sunday, June 9 @6:00 p.m. CT) [*Special Theme: Superhero Night*]
+[**HOME**] Pensacola Blue Wahoos @ Birmingham Barons (6/16/2024 at 4 PM)
+
+[AWAY] Montgomery Biscuits @ Birmingham Barons (6/18/2024 at 6:15 PM)
+
+[AWAY] Birmingham Barons @ Montgomery Biscuits (6/19/2024 at 6:35 PM)
+
+### [Legion](https://www.bhmlegion.com/legion-fc-2024-schedule/)
 
 [**HOME**] Legion vs San Antonio FC (Wednesday, June 19 @7:00 p.m. CT) [*Special Theme: Juneteenth*]
 
@@ -148,16 +176,18 @@ Outputs something similar to the below:
 
 [**HOME**] Legion vs Louisville City FC (Saturday, June 29 @6:30 p.m. CT)
 
-[AWAY] Legion at Charleston Battery (Friday, July 5 @6:30 p.m. CT)
+### [Stallions](https://www.theufl.com/teams/birmingham/schedule)
 
-### Stallions
+No current calendar info available
 
-[**HOME**] USFL CONFERENCE CHAMPIONSHIP VS MICHIGAN PANTHERS (Saturday, June 8, 3:00 PM ET)
+### [Squadron](https://birmingham.gleague.nba.com/schedule)
 
-### Squadron
+No current calendar info available
 
-The Birmingham Squadron are either currently out of season, or now in season but I haven't seen what the calendar looks like and consequently haven't written a scraper for it yet
+### [Bulls](https://www.bullshockey.net/schedule)
+
+Currently out of season
 
 ---
 
-Data last scraped 6/7/2024, 5:19:07 PM, taking 95.4 seconds. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped 6/10/2024, 8:58:56 PM, taking 37.7 seconds. Currently tracking 17 calendars. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
