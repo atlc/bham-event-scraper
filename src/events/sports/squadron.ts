@@ -11,11 +11,10 @@ export async function getSchedule() {
 
         const bodyText = await driver.findElement(By.css("body")).getText();
 
-        const outOfSeason = bodyText.search("The are no games scheduled for your current criteria.") === -1;
+        const outOfSeason = bodyText.search("The are no games scheduled for your current criteria.") !== -1;
 
-        return [];
+        return outOfSeason ? null : [{ formatted: JSON.stringify(bodyText) }];
     } finally {
         await driver.quit();
     }
 }
-getSchedule();

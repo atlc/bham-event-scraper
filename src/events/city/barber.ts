@@ -1,8 +1,8 @@
 import { By } from "selenium-webdriver";
 import { generate_driver } from "../../selenium";
-import { MAX_DESCRIPTION_LENGTH } from "..";
+import { months } from "..";
 
-const url = "https://foo.bar/events/";
+const url = "https://barberracingevents.com/upcoming-events/";
 
 export async function getSchedule() {
     const driver = await generate_driver();
@@ -10,21 +10,33 @@ export async function getSchedule() {
     try {
         await driver.get(url);
 
-        const events = (await driver.findElements(By.className("tribe-events-calendar-list__event-details"))).slice(0, 7);
-        const eventText = await Promise.all(events.map((event) => event.getText()));
+        const fullCalendar = (await driver.findElements(By.className("wpb_content_element")))[1];
+        const listings = await fullCalendar.findElements(By.css("li"));
+        const listingText = await Promise.all(listings.map((listing) => listing.getText()));
 
-        return eventText.map((event) => {
-            const sections = event.split("\n");
-            const [date, name] = sections;
+        return listingText
+            .map((lt) => {
+                const [dates, title] = lt.split(" | ");
+                const [month, days] = dates.split(" ");
 
-            const description = sections[sections.length - 1];
-            const substringedDescription =
-                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+                const today = new Date();
+                const currentMonthIndex = today.getMonth();
+                const ltMonthIndex = months[month] as number;
 
-            const [day, time] = date.split(" | ");
+                if (ltMonthIndex < currentMonthIndex) return null;
 
-            return { name, date, formatted: `[${day}] ${name} (${time}; *${substringedDescription}*)` };
-        });
+                const dateRange = days.split("-");
+                const firstLtDay = Number(dateRange[0]);
+                const todayDay = today.getDate();
+
+                if (ltMonthIndex === currentMonthIndex) {
+                    if (firstLtDay < todayDay) return null;
+                }
+
+                return { title, dates, formatted: `[${dates}] ${title || ""}` };
+            })
+            .filter((x) => x)
+            .slice(0, 6);
     } finally {
         await driver.quit();
     }

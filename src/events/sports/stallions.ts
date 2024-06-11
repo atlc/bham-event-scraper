@@ -47,4 +47,3 @@ export async function getSchedule() {
         await driver.quit();
     }
 }
-getSchedule();
