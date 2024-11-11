@@ -18,15 +18,16 @@ export async function getSchedule() {
 
             const [weekday, day, datetime, title, ...rest] = sections;
 
-            const [address, blank, description] =
-                rest.length === 3 ? rest : ["Vulcan Park and Museum 1701 Valley View Drive, Birmingham, United States", ...rest];
+            const [address, blank, description] = rest.length === 3 ? rest : ["Vulcan Park and Museum 1701 Valley View Drive, Birmingham, United States", ...rest];
 
-            const substringedDescription =
-                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+            const substringedDescription = description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
 
             const formatted = `[${datetime}] ${title} (*${substringedDescription}*)`;
             return { datetime, title, formatted };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Vulcan calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

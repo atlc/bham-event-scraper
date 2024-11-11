@@ -190,4 +190,4 @@ Currently out of season
 
 ---
 
-Data last scraped 6/10/2024, 8:58:56 PM, taking 37.7 seconds. Currently tracking 17 calendars. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
+Data last scraped 6/10/2024, 8:58:56 PM, taking 37.7 seconds. Currently tracking 17 calendars. If I'm broken, ping the mods and tell them they're bad bot parents.

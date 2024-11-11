@@ -24,6 +24,9 @@ export async function getSchedule() {
             const formatted = `[${day}] ${name} (${time ? time + "; " : ""}*${substringedDescription}*)`;
             return { day, time, name, formatted };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Zoo calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

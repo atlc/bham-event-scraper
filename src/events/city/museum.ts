@@ -16,16 +16,20 @@ export async function getSchedule() {
         return eventText.map((event) => {
             const sections = event.split("\n");
 
-            const [date, name, area, description] = sections;
+            let [date, name, area, description] = sections;
 
-            const substringedDescription =
-                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+            if (!description || typeof description !== "string") description = "";
+
+            const substringedDescription = description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
 
             const [day, time] = date.split(" @ ");
 
             const formatted = `[${day}] ${name} - ${area} (${time ? time + "; " : ""}*${substringedDescription}*)`;
             return { day, time, name, formatted };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Museum calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

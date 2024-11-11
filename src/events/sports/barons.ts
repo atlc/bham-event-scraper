@@ -41,7 +41,7 @@ export async function getSchedule() {
         return upcomingGames;
     } catch (error) {
         console.log(error);
-        return [{ formatted: "Couldn't scrape Barons data at this time" }];
+        return [{ formatted: "Barons calendar data unavailable at this time" }];
     }
 }
 

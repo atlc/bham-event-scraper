@@ -44,7 +44,8 @@ ${getFormatted(museum)}
 ${getFormatted(zoo)}
 
 ### [Vulcan](https://visitvulcan.com/events/)
-${getFormatted(vulcan)}`;
+${getFormatted(vulcan)}  
+`;
 
     return { markdown, count };
 }

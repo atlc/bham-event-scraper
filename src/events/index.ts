@@ -3,9 +3,13 @@ import { loadEntertainmentEvents } from "./entertainment";
 import { loadSportEvents } from "./sports";
 
 export function getFormatted(events: { formatted: string }[]) {
-    if (!events || !events.length) return "No current calendar info available";
+    try {
+        if (!events || !events.length) return "No current calendar info available";
 
-    return events.map((event) => event.formatted).join("\n\n");
+        return events.map((event) => event.formatted).join("\n\n");
+    } catch (error) {
+        console.log("Event Formatting Error", error);
+    }
 }
 
 export async function formatEventInfo() {

@@ -17,11 +17,15 @@ export async function getSchedule() {
             const sections = event.split("\n");
             const [date, name, address, blank, description] = sections;
 
-            const substringedDescription =
-                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+            const desc = description || "No description available";
+
+            const substringedDescription = desc.length > MAX_DESCRIPTION_LENGTH ? `${desc.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : desc;
 
             return { name, date, formatted: `[${date}] ${name} (*${substringedDescription}*)` };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "BCRI calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

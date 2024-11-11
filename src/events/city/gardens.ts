@@ -18,13 +18,15 @@ export async function getSchedule() {
             const [date, name] = sections;
 
             const description = sections[sections.length - 1];
-            const substringedDescription =
-                description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
+            const substringedDescription = description.length > MAX_DESCRIPTION_LENGTH ? `${description.substring(0, MAX_DESCRIPTION_LENGTH - 2)}...` : description;
 
             const [day, time] = date.split(" | ");
 
             return { name, date, formatted: `[${day}] ${name} (${time}; *${substringedDescription}*)` };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Botanical Gardens calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

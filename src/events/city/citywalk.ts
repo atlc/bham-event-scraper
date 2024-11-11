@@ -31,33 +31,40 @@ export async function getSchedule() {
 
         const eventText = await Promise.all(events.map((event) => event.getText()));
 
-        return eventText.map((event, i) => {
-            const sections = event.split("\n");
-            const [eventQuantityStr, day, ...eventSections] = sections;
+        return eventText
+            .map((event, i) => {
+                const sections = event.split("\n");
+                const [eventQuantityStr, day, ...eventSections] = sections;
 
-            let description = "";
+                let description = "";
 
-            let dateString = "";
+                let dateString = "";
 
-            if (i === 0) {
-                dateString = `${monthString} ${day}`;
-            } else {
-                const firstEventDay = eventText[i].split("\n")[1];
-                if (Number(day) < Number(firstEventDay)) {
-                    dateString = `${nextMonthString} ${day}`;
-                } else {
+                if (i === 0) {
                     dateString = `${monthString} ${day}`;
+                } else {
+                    const firstEventDay = eventText[i].split("\n")[1];
+                    if (Number(day) < Number(firstEventDay)) {
+                        dateString = `${nextMonthString} ${day}`;
+                    } else {
+                        dateString = `${monthString} ${day}`;
+                    }
                 }
-            }
 
-            for (let i = 0; i < eventSections.length; i += 2) {
-                const time = eventSections[i];
-                const event = eventSections[i + 1];
-                description += `"${event}" (${time});  `;
-            }
+                for (let i = 0; i < eventSections.length; i += 2) {
+                    const time = eventSections[i];
+                    const event = eventSections[i + 1];
+                    description += `"${event}" (${time});  `;
+                }
 
-            return { day, monthString, description, formatted: `[${dateString}] ${description} ` };
-        });
+                if (!description) return null;
+
+                return { day, monthString, description, formatted: `[${dateString}] ${description} ` };
+            })
+            .filter((x) => x);
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "City Walk calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

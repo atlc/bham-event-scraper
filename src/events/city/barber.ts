@@ -37,6 +37,9 @@ export async function getSchedule() {
             })
             .filter((x) => x)
             .slice(0, 6);
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Barber Motorsports calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }
