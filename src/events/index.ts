@@ -48,6 +48,8 @@ Data last scraped ${new Date().toLocaleString()}, taking ${runtime} seconds. Cur
 
 export const MAX_DESCRIPTION_LENGTH = 120;
 
+export const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 export const months: { [key: string | number]: number | string } = {
     January: 0,
     February: 1,
@@ -73,4 +75,12 @@ export const months: { [key: string | number]: number | string } = {
     9: "October",
     10: "November",
     11: "December",
+};
+
+export const capitalize = (str: string) => {
+    if (typeof str !== "string" || !str.length) {
+        return "";
+    }
+
+    return str[0].toUpperCase() + str.substring(1).toLowerCase();
 };
