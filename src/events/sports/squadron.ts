@@ -9,11 +9,24 @@ export async function getSchedule() {
     try {
         await driver.get(url);
 
-        const bodyText = await driver.findElement(By.css("body")).getText();
+        const gameDivs = await driver.findElements(By.css('[class^="Schedule_gameslist__"]'));
+        if (!gameDivs.length) {
+            return [{ formatted: "Squadron are out of season or calendar data unavailable at this time" }];
+        }
 
-        const outOfSeason = bodyText.search("The are no games scheduled for your current criteria.") !== -1;
+        const stripped = await Promise.all(gameDivs.map(async (gd) => gd.getText()));
 
-        return outOfSeason ? null : [{ formatted: JSON.stringify(bodyText) }];
+        const formatted = stripped.map((text) => {
+            const [date, time, description] = text.split("\n\n");
+            const [away, home, arena] = description.split("\n");
+            const isHome = home === "BIRMINGHAM SQUADRON";
+
+            return { formatted: `[${isHome ? "**Home**" : "Away"}] ${date}, ${time}:\t ${away} @ ${home} (${arena})` };
+        });
+
+        return formatted;
+    } catch (error) {
+        return [{ formatted: "Squadron are out of season or calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

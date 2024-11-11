@@ -19,6 +19,9 @@ export async function getSchedule() {
 
             return { name, date, formatted: `[${date}] ${name} (${time}; ${cost})` };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "The Nick's calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

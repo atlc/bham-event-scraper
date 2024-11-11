@@ -20,6 +20,9 @@ export async function getSchedule() {
             const [date, name] = sections;
             return { name, date, formatted: `[${date}] ${name}` };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Workplay calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

@@ -43,7 +43,6 @@ ${sports.markdown}
 
 Data last scraped ${new Date().toLocaleString()}, taking ${runtime} seconds. Currently tracking ${count} calendars. If I'm broken, ping /u/NotFlameRetardant and tell him he's a bad bot dad.
 `;
-
     return markdown;
 }
 

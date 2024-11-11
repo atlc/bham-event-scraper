@@ -22,6 +22,9 @@ export async function getSchedule() {
 
             return { name, date, formatted: `[${date}] ${name} (${time})` };
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Avondale calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

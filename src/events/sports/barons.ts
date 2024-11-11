@@ -14,6 +14,11 @@ export async function getSchedule() {
         const data = (await res.json()) as BaronsScheduleResponse;
 
         const games = data.dates;
+
+        if (!games.length) {
+            return [{ formatted: "Barons are out of season" }];
+        }
+
         const currentGamesIndex = games.findIndex((game) => {
             const gameDate = new Date(game.date);
             const gameIsInFuture = gameDate > date;
@@ -40,8 +45,7 @@ export async function getSchedule() {
 
         return upcomingGames;
     } catch (error) {
-        console.log(error);
-        return [{ formatted: "Barons calendar data unavailable at this time" }];
+        return [{ formatted: "Barons are out of season or calendar data unavailable at this time" }];
     }
 }
 

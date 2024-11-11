@@ -23,6 +23,9 @@ export async function getSchedule() {
                 return { artist, presenter, date, formatted: `[${date}] ${artist}` };
             }
         });
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Iron City calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

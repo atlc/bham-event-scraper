@@ -73,6 +73,9 @@ export async function getSchedule() {
         });
 
         return consolidated;
+    } catch (error) {
+        console.log(error);
+        return [{ formatted: "Saturn calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

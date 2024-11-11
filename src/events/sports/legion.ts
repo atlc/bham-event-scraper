@@ -11,11 +11,19 @@ export async function getSchedule() {
 
     try {
         await driver.get(url);
+
         const events = await driver.findElements(By.className("GameContainer"));
 
-        const stripped = (await Promise.all(events.map((event) => event.getText()))).filter((x) => x);
-        const formatted = stripped
+        const stripped = (await Promise.all(events.map((event) => event.getText())))
+            .filter((x) => x)
             .slice(0, 3)
+            .filter((str) => !str.includes("RECAP"));
+
+        if (!stripped.length) {
+            return [{ formatted: "Legion are out of season or calendar data unavailable at this time" }];
+        }
+
+        const formatted = stripped
             .map((str) => str.replace("\nTICKETS", "").replace("\nWATCH", ""))
             .map((str) => {
                 const elements = str.split("\n");
@@ -35,6 +43,8 @@ export async function getSchedule() {
             });
 
         return formatted;
+    } catch (error) {
+        return [{ formatted: "Legion are out of season or calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }

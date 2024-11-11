@@ -11,13 +11,33 @@ export async function getSchedule() {
         await driver.get(url);
 
         const potentialGameDivs = await driver.findElements(By.className("chakra-container"));
+        const pgdTexts = await Promise.all(potentialGameDivs.map(async (pgd) => pgd.getText()));
+
+        const kickoffText = pgdTexts.find((text) => text.toUpperCase().includes("KICKOFF WEEKEND BEGINS"));
+
+        if (kickoffText) {
+            const [header, dateAnnoucement, buttonPanel] = kickoffText.split("\n");
+
+            return [{ formatted: dateAnnoucement }];
+        }
+
         const games = await Promise.all(
             potentialGameDivs.filter(async (pgd) => {
-                const gameHeading = await pgd.findElement(By.className("chakra-heading"));
-                return !!gameHeading;
+                try {
+                    const gameHeading = await pgd.findElement(By.className("chakra-heading"));
+                    return !!gameHeading;
+                } catch (error) {
+                    return null;
+                }
             })
         );
+
+        if (!games.length) {
+            throw new Error("No games were found, and either season has started or no kickoff date was announced");
+        }
+
         const gameText = (await Promise.all(games.map((game) => game.getText()))).map((game) => game.split("\n")).filter((splits) => splits.length === 6);
+        if (!gameText.length) throw new Error("No game text available");
 
         const consolidated = gameText
             .map((game) => {
@@ -43,6 +63,8 @@ export async function getSchedule() {
             .filter((game) => game.isUpcoming);
 
         return consolidated;
+    } catch (error) {
+        return [{ formatted: "Stallions are out of season or calendar data unavailable at this time" }];
     } finally {
         await driver.quit();
     }
